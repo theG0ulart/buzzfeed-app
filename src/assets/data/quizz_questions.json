@@ -1,55 +1,56 @@
 {
-  "title":"Você seria um heroi ou vilão ?",
-  "questions":[
+  "title": "Análise Front-end e Back-end",
+  "questions": [
     {
-      "id":1,
-      "question": "Qual super poder você escolheria ?",
-      "options":[
-        {"id": 1, "name":"Raios-Lasers", "alias":"A"},
-        {"id": 2, "name":"Voar", "alias":"B"},
-        {"id": 3, "name":"Explodir coisas", "alias":"A"},
-        {"id": 4, "name":"Curar feridas", "alias":"B"},
-        {"id": 5, "name":"Soltar fogo pelas mãos", "alias":"A"}
+      "id": 1,
+      "question": "O que é mais importante para você: criar interfaces visuais atraentes e interativas ou desenvolver a lógica e o funcionamento dos sistemas?",
+      "options": [
+        {"id": 1, "name": "Adoro criar interfaces envolventes e interativas.", "alias": "A"},
+        {"id": 2, "name": "Tenho interesse em ambos os aspectos.", "alias": "B"},
+        {"id": 3, "name": "Prefiro trabalhar na lógica e no funcionamento dos sistemas.", "alias": "C"},
+        {"id": 4, "name": "Posso me adaptar às duas áreas.", "alias": "D"},
+        {"id": 5, "name": "Não tenho certeza.", "alias": "E"}
       ]
     },
     {
-      "id":2,
-      "question": "Quem você salvaria primeiro ?",
-      "options":[
-        {"id": 1, "name":"Crianças", "alias":"A"},
-        {"id": 2, "name":"Idosos", "alias":"A"},
-        {"id": 3, "name":"Não saberia escolher", "alias":"B"}
+      "id": 2,
+      "question": "Você se interessa mais por estruturas de dados, bancos de dados e otimização de desempenho, ou por design de layouts e experiência do usuário?",
+      "options": [
+        {"id": 1, "name": "Sou apaixonado por design e experiência do usuário.", "alias": "A"},
+        {"id": 2, "name": "Tenho interesse tanto em design quanto em otimização de desempenho.", "alias": "B"},
+        {"id": 3, "name": "Prefiro trabalhar com estruturas de dados e otimização.", "alias": "C"},
+        {"id": 4, "name": "Posso me adaptar a ambas as áreas.", "alias": "D"},
+        {"id": 5, "name": "Não tenho certeza.", "alias": "E"}
       ]
     },
     {
-      "id":3,
-      "question": "Qual a sua maior preocupação ao enfretar outro super ser ?",
-      "options":[
-        {"id": 1, "name":"Não destruir prédios", "alias":"B"},
-        {"id": 2, "name":"Socar a cara do inimigo", "alias":"A"},
-        {"id": 3, "name":"Não sujar meu traje", "alias":"A"},
-        {"id": 4, "name":"Não deixar ninguém se ferir", "alias":"B"}
+      "id": 3,
+      "question": "Gosta de trabalhar com ferramentas gráficas, animações e está sempre atento às últimas tendências de design?",
+      "options": [
+        {"id": 1, "name": "Sim, adoro trabalhar com ferramentas gráficas e animações.", "alias": "A"},
+        {"id": 2, "name": "Gosto tanto de design quanto de otimização.", "alias": "B"},
+        {"id": 3, "name": "Sou focado em ferramentas gráficas e design.", "alias": "C"},
+        {"id": 4, "name": "Posso me adaptar a ambas as áreas.", "alias": "D"},
+        {"id": 5, "name": "Não tenho certeza.", "alias": "E"}
       ]
     },
     {
-      "id":4,
-      "question": "Qual o seu maior foco ?",
-      "options":[
-        {"id": 1, "name":"Ficar rico com poderes", "alias":"A"},
-        {"id": 2, "name":"Salvar a cidade", "alias":"B"}
-      ]
-    },
-    {
-      "id":5,
-      "question": "Qual o seu apelido de super ser ?",
-      "options":[
-        {"id": 1, "name":"O Terrivel", "alias":"A"},
-        {"id": 2, "name":"Amigo da vizinhança", "alias":"B"}
+      "id": 4,
+      "question": "Você se sente mais confortável lidando com a interface do usuário e a experiência do cliente ou prefere lidar com o processamento de dados, segurança e escalabilidade?",
+      "options": [
+        {"id": 1, "name": "Eu me sinto confortável trabalhando na interface do usuário e na experiência do cliente.", "alias": "A"},
+        {"id": 2, "name": "Tenho interesse em ambas as áreas.", "alias": "B"},
+        {"id": 3, "name": "Prefiro lidar com o processamento de dados, segurança e escalabilidade.", "alias": "C"},
+        {"id": 4, "name": "Posso me adaptar a ambas as áreas.", "alias": "D"},
+        {"id": 5, "name": "Não tenho certeza.", "alias": "E"}
       ]
     }
   ],
-  "results":{
-    "A": "Você muito provavelmente seria um super vilão!",
-    "B": "Você muito provavelmente seria um super Herói!"
+  "results": {
+    "A": "Você muito provavelmente seria um desenvolvedor de Front-end!",
+    "B": "Você muito provavelmente seria um desenvolvedor Full Stack!",
+    "C": "Você muito provavelmente seria um desenvolvedor de Back-end!",
+    "D": "Você é versátil e pode se adaptar tanto ao Front-end quanto ao Back-end!",
+    "E": "Sua escolha não está clara. Considere refletir mais sobre suas preferências."
   }
 }

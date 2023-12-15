@@ -8,24 +8,26 @@ import quizz_questions from '../../../assets/data/quizz_questions.json'
 })
 
 
-export class QuizzComponent implements OnInit{
-  title:string = ""
+export class QuizzComponent implements OnInit {
+  title: string = ""
 
-  questions:any = ""
-  questionSelected:any = ""
+  questions: any = ""
+  questionSelected: any = ""
 
-  answers:string[] = []
-  answerSelected:string = ""
+  answers: string[] = []
+  answerSelected: string = ""
 
-  questionIndex:number = 0
-  questionMaxIndex:number = 0
+  questionIndex: number = 0
+  questionMaxIndex: number = 0
 
-  finished:boolean = true
+  finished: boolean = false
+  hiidden: boolean = false
 
-  constructor(){}
+
+  constructor() { }
 
   ngOnInit(): void {
-    if(quizz_questions){
+    if (quizz_questions) {
       this.finished = false
       this.title = quizz_questions.title
 
@@ -41,22 +43,42 @@ export class QuizzComponent implements OnInit{
     }
   }
 
-  selectedOption (value:string) {
-    if(this.questionMaxIndex > this.questionIndex){
+  selectedOption(value: string) {
+    if (this.questionMaxIndex > this.questionIndex) {
       this.answers.push(value)
       this.nextStep()
     }
   }
 
-  nextStep(){
-    this.questionIndex+=1
+  async nextStep() {
+    this.questionIndex += 1
 
-    if(this.questionMaxIndex > this.questionIndex){
+    if (this.questionMaxIndex > this.questionIndex) {
       this.questionSelected = this.questions[this.questionIndex]
     } else {
+      const finalAnswer:string = await this.checkResult(this.answers)
       this.finished = true
+      this.answerSelected = quizz_questions.results[finalAnswer as keyof
+      typeof quizz_questions.results]
     }
 
     console.log(this.answers)
   }
+
+  async checkResult(answers: string[]) {
+    const result = answers.reduce((previous, current, i, arr) => {
+      if (
+        arr.filter(item => item === previous).length >
+        arr.filter(item => item === current).length
+      ) {
+        return previous
+      } else {
+        return current
+      }
+    })
+
+    return result
+  }
 }
+
+
